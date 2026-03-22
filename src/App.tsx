@@ -11,7 +11,7 @@ function App() {
   const testfn = () => setCount((prev) => prev + 1);
 
   useEffect(() => {
-    setCount(count + 5);
+    setCount((prev) => prev + 5);
   }, []);
 
   return (
