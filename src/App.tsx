@@ -13,7 +13,7 @@ function App() {
 
   let u = users.find((item) => item.id == 10);
   if (u.status == 0) {
-    console.log("user found");
+    console.log("user not found");
   }
 
   useEffect(() => {
