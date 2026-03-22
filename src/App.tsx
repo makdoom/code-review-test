@@ -8,7 +8,13 @@ function App() {
   const [count, setCount] = useState(0);
   console.log("testing - 12");
 
+  const users = [];
   const testfn = () => setCount((prev) => prev + 1);
+
+  let u = users.find((item) => item.id == 10);
+  if (u.status == 0) {
+    console.log("user found");
+  }
 
   useEffect(() => {
     setCount((prev) => prev + 5);
