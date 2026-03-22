@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
@@ -9,6 +9,10 @@ function App() {
   console.log("testing - 12");
 
   const testfn = () => setCount((prev) => prev + 1);
+
+  useEffect(() => {
+    setCount(count + 5);
+  }, []);
 
   return (
     <>
