@@ -7,6 +7,8 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
   console.log("testing - 12");
+
+  const testfn = () => (count += 1);
   return (
     <>
       <section id="center">
