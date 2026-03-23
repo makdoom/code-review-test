@@ -9,7 +9,7 @@ let users = [];
 function App() {
   const [count, setCount] = useState(0);
 
-  let admin = users.find((item) => item.role == "admin");
+  let admin = users.find((item) => item.role == "user");
   if (admin.status == "1") {
     return <p>Admin</p>;
   }
