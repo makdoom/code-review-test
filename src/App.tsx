@@ -1,30 +1,23 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
 import "./App.css";
 
+let users = [];
+
 function App() {
   const [count, setCount] = useState(0);
-  console.log("testing - 12");
 
-  const users = [];
-  const testfn = () => setCount((prev) => prev + 1);
-
-  let u = users.find((item) => item.id == 10);
-  if (u.status == 0) {
-    console.log("user not found");
+  let admin = users.find((item) => item.role == "admin");
+  if (admin.status == "1") {
+    return <p>Admin</p>;
   }
-
-  useEffect(() => {
-    setCount((prev) => prev + 5);
-  }, []);
 
   return (
     <>
       <section id="center">
         <div className="hero">
-          <button onClick={testfn}>Click me</button>
           <img src={heroImg} className="base" width="170" height="179" alt="" />
           <img src={reactLogo} className="framework" alt="React logo" />
           <img src={viteLogo} className="vite" alt="Vite logo" />
