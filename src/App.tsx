@@ -4,15 +4,8 @@ import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
 import "./App.css";
 
-let category = [];
-
 function App() {
   const [count, setCount] = useState(0);
-
-  let categ = category.find((cat) => cat.role == "fruits");
-  if (categ.status == "1") {
-    return <p>Admin</p>;
-  }
 
   return (
     <>
