@@ -1,29 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
 import "./App.css";
 
-type User = {
-  id: number;
-  name: string;
-  role: string;
-};
-
-let users: User[] = [];
-
 function App() {
   const [count, setCount] = useState(0);
-
-  const fetchUsers = async () => {
-    const res = await fetch("/api/users");
-    const data = await res.json();
-    users = data;
-  };
-
-  useEffect(() => {
-    fetchUsers();
-  }, []);
 
   return (
     <>
